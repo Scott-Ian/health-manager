@@ -67,3 +67,7 @@ README: Project Overview
   * Layout database structure (collections), and expected document values
   * Find React-native template, and view tag resource
   * Build the application!
+
+  ## API Information
+
+  * Drug Adverse Effects: https://open.fda.gov/apis/drug/event/
