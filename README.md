@@ -71,3 +71,6 @@ README: Project Overview
   ## API Information
 
   * Drug Adverse Effects: https://open.fda.gov/apis/drug/event/
+
+  ## Resources
+  * React Native Tutorial: https://www.youtube.com/watch?v=0-S5a0eXPoc&ab_channel=ProgrammingwithMosh
