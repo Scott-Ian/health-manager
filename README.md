@@ -37,4 +37,5 @@ README: Project Overview
  * As a user, I want the option to pre-load information regarding a medication into my medication list entries when desired.
  * As a user, I want this applications calendar to sync with my Google Calendar.
 
- 
+ ## Layout and Scaffolding/Design
+ ![HomeScreen Layout](./ReadmeImg/HomeLayout.JPG)
