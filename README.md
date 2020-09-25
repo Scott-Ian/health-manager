@@ -37,5 +37,28 @@ README: Project Overview
  * As a user, I want the option to pre-load information regarding a medication into my medication list entries when desired.
  * As a user, I want this applications calendar to sync with my Google Calendar.
 
- ## Layout and Scaffolding/Design
+ ## Diagrams
+
+ ### Home Layout Mockup
  ![HomeScreen Layout](./ReadmeImg/HomeLayout.JPG)
+
+ ### Component Scaffolding
+  ![Component Scaffolding](./ReadmeImg/ComponentScaffolding.jpg)
+
+  ## Technologies
+  * React-native
+  * JavaScript
+  * React-redux
+  * Redux
+  * CSS
+  * HTML
+  * CSS Grid
+  * Bootstrap
+  * Expo.io
+  * Jest
+  * API Calls
+
+
+  ## ToDo List
+
+  * Find API for 
