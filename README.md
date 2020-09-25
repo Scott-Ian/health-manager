@@ -24,3 +24,17 @@ README: Project Overview
  * As a user, I want the ability to rate my Quality Of Life for any given day, using several metrics: pain, nausea, overall rating.
  * As a user, I want the ability to take notes on any particular day to keep track of anything I might need (e.g., number of bowel movements, localization of pain, food or activity that caused me to feel nauseaus).
  * As a user, I want the ability to look back at any day, or see my QOL ratings side-by-side for a given week or month (perhaps in color-coded calendar) to provide concrete context and evidence when speaking with my health providers.
+
+ ### Calendar
+ * As a user, I want the ability to access upcoming, current, and past QOL ratings, appointments, and notifications within a centralized calendar view.
+ * As a user, I want the ability to sync prescription filling reminders, and medical appointments to my Google Calendar.
+
+ ### Notifications/Upcoming
+ * As a user, I want a portion in the application to remind me of upcoming medical appointments, medication refil reminders etc.
+ * As a user, I want the application to remind me to submit a QOL rating for the day via push notifications on my mobile device, and within the device itself.
+
+ ### API Consuming features
+ * As a user, I want the option to pre-load information regarding a medication into my medication list entries when desired.
+ * As a user, I want this applications calendar to sync with my Google Calendar.
+
+ 
