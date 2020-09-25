@@ -61,4 +61,9 @@ README: Project Overview
 
   ## ToDo List
 
-  * Find API for 
+  * Find API for Medication information
+  * Study documentation for Google Calendar
+  * Look into Calendars with firebase
+  * Layout database structure (collections), and expected document values
+  * Find React-native template, and view tag resource
+  * Build the application!
