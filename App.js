@@ -6,7 +6,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>Hello World!</Text>
+        <Text>Hello World!!</Text>
         <Image source={{
           width: 200,
           height: 300,
