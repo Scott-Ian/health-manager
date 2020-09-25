@@ -57,6 +57,7 @@ README: Project Overview
   * Expo.io
   * Jest
   * API Calls
+  * react-native-community/hooks
 
 
   ## ToDo List
