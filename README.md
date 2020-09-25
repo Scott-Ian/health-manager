@@ -52,7 +52,7 @@ README: Project Overview
   * Redux
   * CSS
   * HTML
-  * CSS Grid
+  * Flexbox
   * Bootstrap
   * Expo.io
   * Jest
