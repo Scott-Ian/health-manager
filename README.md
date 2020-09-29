@@ -70,6 +70,9 @@ README: Project Overview
   * Find React-native template, and view tag resource
   * Build the application!
 
+  ## Stretch goals
+  * View transition animations!
+
   ## API Information
 
   * Drug Adverse Effects: https://open.fda.gov/apis/drug/event/
