@@ -5,7 +5,7 @@ import WelcomeScreen from './src/components/WelcomeScreen';
 
 function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <WelcomeScreen />
     </View>
   )
@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    height: "100vh",
+    width: "100vw",
   },
 });
 
