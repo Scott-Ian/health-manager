@@ -119,3 +119,25 @@ Medicine/Drup API (have not yet found one that would be a great fit)
 React Native
 chart.js
 Possibly google calendar integration ( but I have had bad experiences with google APIs  and developer services, so may avoid for another solution)
+
+## Required Components/views
+1. Welcom/sign-in
+2. Calendar display
+
+3. Medications List
+4. Medication Details
+5. Medication Edit
+6. Medication Create
+
+Appointments
+7. Appointment List
+8. Appointment Details
+  * Delete
+  * Links to Edit
+8. Appointment Edit
+9. Appointment Create
+
+QOL Ratings
+10. QOL OverView
+11. QOL Create
+12. QOL
