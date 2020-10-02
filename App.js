@@ -3,9 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
 import WelcomeScreen from './src/components/WelcomeScreen';
 
-export default function App() {
+function App() {
   return (
-    <WelcomeScreen />
+    <View>
+      <WelcomeScreen />
+    </View>
   )
 }
 
@@ -18,3 +20,5 @@ const styles = StyleSheet.create({
     paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
+
+export default App;

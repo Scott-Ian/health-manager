@@ -1,6 +1,5 @@
 {
   "expo": {
-    "entryPoint": "./App.js",
     "name": "health-manager",
     "slug": "health-manager",
     "version": "1.0.0",
