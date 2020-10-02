@@ -10,12 +10,13 @@ function WelcomeScreen(props) {
     //   <View style={styles.loginButton} >
     // </ImageBackground>
     
-    <View styles={styles.background}>
-
+    <ImageBackground
+      source={require('./../assets/background2.jpg')}
+      style={styles.background} >
       <View style={styles.loginButton} >
-        <Text>Hello Jesus</Text>
+        <Text>Hello There General Kenobi</Text>
       </View>
-    </View>
+    </ImageBackground>
   )
 }
 
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: "flex-end",
-    backgroundColor: "#32CD32"
+    // backgroundColor: "#32CD32"
   },
   loginButton: {
     width: '100%',
