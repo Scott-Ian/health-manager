@@ -6,7 +6,7 @@ import CreateKombuchaForm from '../../components/CreateKombuchaForm';
 describe('displayReducer', () => {
 
   const displayState = {
-    
+    display: "WelcomeScreen",
   }
 
 
