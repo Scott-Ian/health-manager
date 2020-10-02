@@ -1,17 +1,17 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Text } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, Image } from 'react-native';
 
 function WelcomeScreen(props) {
 
   return(
-    <ImageBackground 
-    source={require("./../assets/background.jpg")}
-    style={styles.background}>
-      <View style={styles.loginButton}>
-        <Text>Hello</Text>
+    <Image 
+    source={require("./../assets/background2.jpg")}
+    style={styles.background} />
+    //   {/* <View style={styles.loginButton}>
+    //     <Text>Hello</Text>
 
-      </View>
-    </ImageBackground>
+    //   </View> */}
+    // // </Image>
   )
 }
 
