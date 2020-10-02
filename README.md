@@ -71,7 +71,7 @@ README: Project Overview
   * Build the application!
 
   ## Stretch goals
-  * View transition animations!
+  * View transition animations!!
 
   ## API Information
 
