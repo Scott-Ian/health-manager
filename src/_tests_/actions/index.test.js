@@ -47,8 +47,6 @@ describe('display reducer actions', () => {
     })
   });
 
-  // ------------------------------------------
-
   it('appointmentList should create APPOINTMENT_LIST action', () => {
     expect(actions.appointmentList()).toEqual({
       type: c.APPOINTMENT_LIST
@@ -75,6 +73,30 @@ describe('display reducer actions', () => {
     })
   });
 
+  it('qolList should create QOL_LIST action', () => {
+    expect(actions.qolList()).toEqual({
+      type: c.QOL_LIST
+    })
+  });
 
+  it('qolCreate should create QOL_CREATE action', () => {
+    expect(actions.qolCreate()).toEqual({
+      type: c.QOL_CREATE
+    })
+  });
+
+  it('qolDetail should create QOL_Detail action', () => {
+    expect(actions.qolDetail('The Witches Switch Swatches')).toEqual({
+      type: c.QOL_DETAIL,
+      medicationId: 'The Witches Switch Swatches'
+    })
+  });
+
+  it('qolEdit should create QOL_EDIT action', () => {
+    expect(actions.qolDetail('Never Better')).toEqual({
+      type: c.QOL_EDIT,
+      medicationId: 'Never Better'
+    })
+  });
 
 })
