@@ -7,29 +7,18 @@ function WelcomeScreen(props) {
   return(
     <ImageBackground 
     source={backgroundImage}
-    style={styles.background}>
+    style={styles.background} >
+      <View style={styles.logoContainer}>
+        <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
+        <Text>Take Charge of Your Health Journey</Text>
+      </View>
       <View style={styles.loginButton} >
         <Text>Button will be here!</Text>
       </View>
+      <View style={styles.registerButton} >
+        <Text>Button will be here!</Text>
+      </View>
     </ImageBackground>
-    
-    /* // <ImageBackground */
-    //   source={backgroundImage}
-    //   style={styles.background} >
-    //   <View style={styles.loginButton} >
-    //     <Text>Hello There General Kenobi</Text>
-    //   </View>
-    // </ImageBackground>
-
-    // <View style={styles.background}>
-    //   <View style={styles.loginButton} >
-    //     <Text>Hello There General Kenobi</Text>
-    //   </View>
-    // </View>
-
-    // <Image
-    // source={require('./../assets/background2.jpg')}
-    // style={styles.background} />
   )
 }
 
@@ -40,13 +29,27 @@ const styles = StyleSheet.create({
     backgroundColor: "#32CD32",
     height: "100%",
     width: "100%",
+    alignItems: "center"
   },
   loginButton: {
     width: '100%',
     height: 70,
     backgroundColor: '#fc5c65',
-  }
-  
+  },
+  registerButton: {
+    width: '100%',
+    height: 70,
+    backgroundColor: '#4ecdc4',
+  },
+  logo: {
+    width: 100,
+    height: 100,
+  },
+  logoContainer: {
+    position: 'absolute',
+    top: 80,
+    alignItems: 'center',
+  },
 });
 
 export default WelcomeScreen;
