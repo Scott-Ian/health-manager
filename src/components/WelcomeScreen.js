@@ -4,20 +4,26 @@ import { ImageBackground, StyleSheet, View, Text, Image } from 'react-native';
 function WelcomeScreen(props) {
 
   return(
-    <Image 
-    source={require("./../assets/background2.jpg")}
-    style={styles.background} />
-    //   {/* <View style={styles.loginButton}>
-    //     <Text>Hello</Text>
+    // <ImageBackground 
+    // source={require('./../assets/background2.jpg')}
+    // style={styles.background}>
+    //   <View style={styles.loginButton} >
+    // </ImageBackground>
+    
+    <View styles={styles.background}>
 
-    //   </View> */}
-    // // </Image>
+      <View style={styles.loginButton} >
+        <Text>Hello Jesus</Text>
+      </View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    justifyContent: "flex-end",
+    backgroundColor: "#32CD32"
   },
   loginButton: {
     width: '100%',
@@ -25,6 +31,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fc5c65',
   }
   
-})
+});
 
 export default WelcomeScreen;
