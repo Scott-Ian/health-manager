@@ -47,6 +47,34 @@ describe('display reducer actions', () => {
     })
   });
 
+  // ------------------------------------------
+
+  it('appointmentList should create APPOINTMENT_LIST action', () => {
+    expect(actions.appointmentList()).toEqual({
+      type: c.APPOINTMENT_LIST
+    })
+  });
+
+  it('appointmentCreate should create APPOINTMENT_CREATE action', () => {
+    expect(actions.appointmentCreate()).toEqual({
+      type: c.APPOINTMENT_CREATE
+    })
+  });
+
+  it('appointmentDetail should create APPOINTMENT_Detail action', () => {
+    expect(actions.appointmentDetail('stringKey')).toEqual({
+      type: c.APPOINTMENT_DETAIL,
+      medicationId: 'stringKey'
+    })
+  });
+
+  it('appointmentEdit should create APPOINTMENT_EDIT action', () => {
+    expect(actions.appointmentDetail('12/21/2020')).toEqual({
+      type: c.APPOINTMENT_EDIT,
+      medicationId: '12/21/2020'
+    })
+  });
+
 
 
 })
