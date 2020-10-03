@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 import * as a from './../actions/index';
 import * as c from './../actions/ActionTypes';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
-import WelcomeScreen from './WelcomeScreen';
 import { View } from 'react-native';
+
+// Screen imports
+import WelcomeScreen from './WelcomeScreen';
+import Home from ''
+
 
 class DisplayControl extends React.Component {
 
