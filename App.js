@@ -1,13 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { createStore } from 'redux';
+import  rootReducer from './src/reducers/index';
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { createFirestoreInstance } from 'redux-firestore';
+import firebase from './firebase';
+import 'firebase/auth';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
-import WelcomeScreen from './src/components/WelcomeScreen';
+import DisplayControl from './src/components/DisplayControl';
+
+const store = createStore(rootReducer);
+
+const rrfProps = {
+  firebase,
+  config: {
+    userProfile: 'users',
+    useFirestoreForProfile: true,
+  },
+  dispatch: store.dispatch,
+  createFirestoreInstance
+}
 
 function App() {
   return (
-    <View style={styles.container}>
-      <WelcomeScreen />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <DisplayControl />
+      </View>
+    </Provider>
   )
 }
 
