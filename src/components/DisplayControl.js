@@ -8,7 +8,7 @@ import { View } from 'react-native';
 
 // Screen imports
 import WelcomeScreen from './WelcomeScreen';
-import Home from ''
+import Home from './Home';
 
 
 class DisplayControl extends React.Component {
