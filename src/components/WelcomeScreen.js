@@ -9,27 +9,35 @@ import firebase from 'firebase/app';
 
 function WelcomeScreen(props) {
 
-  // Sign In/Up form display state
+  // Sign In/Up form display state and error text hooks
   const [ formType, setFormType ] = useState(null);
+  const [ errorText, setErrorText ] = useState(null);
   
-  // Sign In Text Value Storage
+  // Sign In Text Value hooks
   const [ signInEmail, setSignInEmail ] = useState(null);
   const [ signInPassword, setSignInPassword ] = useState(null);
 
-  // SignUp Text Value Storage
+  // SignUp Text Value hooks
   const [ signUpEmail, setSignUpEmail ] = useState(null);
   const [ signUpPassword, setSignUpPassword ] = useState(null);
   const [ signUpPasswordConfirm, setSignUpPasswordConfirm ] = useState(null);
 
-  function doSignUp(event) {
-    event.preventDefault();
-    const email= event.target.email.value;
-    const password = event.target.password.value;
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-      console.log('Successfully signed up!');
-    }).catch(function(error) {
-      console.log(error.message);
-    });
+  function doSignUp() {
+    setErrorText(null);
+    const email = signUpEmail;
+    const password = signUpPassword;
+    const passwordConfirm = signUpPasswordConfirm;
+
+    if (password != passwordConfirm) {
+      setErrorText("Passwords do not match!");
+    } else {
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
+        console.log('Successfully signed up!');
+      }).catch(function(error) {
+        console.log(error.message);
+        setErrorText(error.message);
+      });
+    }
   }
 
   function doSignIn(event) {
@@ -60,21 +68,17 @@ function WelcomeScreen(props) {
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignInEmail(text)}
-          value = 'Email'
         />
-
         <Text>Password:</Text>
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignInPassword(text)}
           secureTextEntry = {true}
-          value = 'Email'
         />
 
         <View style={styles.loginButton} >
           <Button onPress={doSignIn} title="Sign In" color={colors.primary} />
         </View>
-
       </ImageBackground>
     )
   }
@@ -90,11 +94,28 @@ function WelcomeScreen(props) {
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
           <Text>Take Charge of Your Health Journey</Text>
         </View>
-        <View style={styles.loginButton} >
-          <Text>Test</Text>
-        </View>
+        
+        <Text>Email:</Text>
+        <TextInput
+          style={styles.email}
+          onChangeText = {text => setSignUpEmail(text)}
+        />
+        <Text>Password:</Text>
+        <TextInput
+          style={styles.email}
+          onChangeText = {text => setSignUpPassword(text)}
+          secureTextEntry = {true}
+        />
+
+        <Text>Confirm Password:</Text>
+        <TextInput
+          style={styles.email}
+          onChangeText = {text => setSignUpPasswordConfirm(text)}
+          secureTextEntry = {true}
+        />
+
         <View style={styles.registerButton} >
-          <Text>Button will be here!</Text>
+          <Button onPress={doSignUp} title="Sign In" color={colors.primary} />
         </View>
       </ImageBackground>
     )
