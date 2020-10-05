@@ -26,11 +26,13 @@ class DisplayControl extends React.Component {
   render() {
     const auth = this.props.firebase.auth();
     if(!isLoaded(auth)) {
-      return 
+      return (
         <View>
           <WelcomeScreen.js />
         </View>
+      )
     }
+
     let visibleState ="";
 
     if(this.props.displayState.display === c.WELCOME_SCREEN) {
