@@ -4,6 +4,7 @@ import { welcomeScreen } from '../actions';
 import backgroundImage from '../assets/background2.jpg';
 import colors from './../config/colors';
 import PropTypes from 'prop-types';
+import firebase from 'firebase/app';
 
 function WelcomeScreen(props) {
 

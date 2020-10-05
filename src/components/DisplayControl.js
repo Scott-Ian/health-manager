@@ -15,7 +15,6 @@ class DisplayControl extends React.Component {
 
   constructor(props) {
     super(props);
-    
   }
 
   goHome = () => {
@@ -25,6 +24,13 @@ class DisplayControl extends React.Component {
   }
 
   render() {
+    const auth = this.props.firebase.auth();
+    if(!isLoaded(auth)) {
+      return 
+        <View>
+          <WelcomeScreen.js />
+        </View>
+    }
     let visibleState ="";
 
     if(this.props.displayState.display === c.WELCOME_SCREEN) {
@@ -79,4 +85,4 @@ const mapStateToProps = state => {
 
 DisplayControl = connect(mapStateToProps)(DisplayControl);
 
-export default DisplayControl;
+export default withFirestore(DisplayControl);
