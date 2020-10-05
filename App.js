@@ -8,6 +8,7 @@ import 'firebase/auth';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
 import DisplayControl from './src/components/DisplayControl';
+import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer);
 

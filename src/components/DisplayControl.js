@@ -13,7 +13,7 @@ import Home from './Home';
 
 class DisplayControl extends React.Component {
 
-  constructor(prosp) {
+  constructor(props) {
     super(props);
     
   }
@@ -61,10 +61,13 @@ class DisplayControl extends React.Component {
   }
 }
 
+DisplayControl.propTypes = {
+  displayState: PropTypes.object,
+}
 
 const mapStateToProps = state => {
   return{
-    displayState: state.Display
+    displayState: state.displayState,
   }
 }
 
