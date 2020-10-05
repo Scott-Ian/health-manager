@@ -40,18 +40,18 @@ function WelcomeScreen(props) {
     }
   }
 
-  function doSignIn(event) {
-    event.preventDefault();
-    const email = event.target.signinEmail.value;
-    const password = event.target.signinPassword.value;
+  function doSignIn() {
+    setErrorText(null);
+    const email = signInEmail;
+    const password = signInPassword;
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log('Successfully signed in!');
     }).catch(function(error) {
-      console.log(error.message)
+      console.log(error.message);
+      setErrorText(error.message);
     });
   }
-
 
   // Sign in display
   if (formType === "Sign In") {
@@ -64,6 +64,8 @@ function WelcomeScreen(props) {
           <Text>Take Charge of Your Health Journey</Text>
         </View>
         
+        <Text style={styles.header}>Sign In!</Text>
+        <Text>{errorText}</Text>
         <Text>Email:</Text>
         <TextInput
           style={styles.email}
@@ -94,6 +96,9 @@ function WelcomeScreen(props) {
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
           <Text>Take Charge of Your Health Journey</Text>
         </View>
+        
+        <Text style={styles.header}>Sign Up!</Text>
+        <Text>{errorText}</Text>
         
         <Text>Email:</Text>
         <TextInput
@@ -180,6 +185,10 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: 'gray',
     borderWidth: 1
+  },
+  header: {
+    fontSize: 20,
+    textDecorationLine: 'underline',
   }
 });
 
