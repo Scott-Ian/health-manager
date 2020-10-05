@@ -25,6 +25,7 @@ class DisplayControl extends React.Component {
 
   render() {
     const auth = this.props.firebase.auth();
+    let visibleState;
     if(!isLoaded(auth)) {
       return (
         <View>
@@ -33,38 +34,39 @@ class DisplayControl extends React.Component {
       )
     }
 
-    let visibleState ="";
+    if((isLoaded(auth)) && (auth.currentUser != null)) {
 
-    if(this.props.displayState.display === c.WELCOME_SCREEN) {
-      visibleState= <WelcomeScreen  goHome = {this.goHome}/>
-    } else if (this.props.displayState.display === c.HOME_SCREEN) {
-      visibleState = <Home />
-    } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {
-      visibleState = <Calendar />
-    } else if (this.props.displayState.display === c.MEDICATION_LIST) {
-      visibleState = <MedicationList />
-    } else if (this.props.displayState.display === c.MEDICATION_DETAIL) {
-      visibleState = <MedicationDetail />
-    } else if (this.props.displayState.display === c.MEDICATION_EDIT) {
-      visibleState = <MedicationEdit />
-    } else if (this.props.displayState.display === c.MEDICATION_CREATE) {
-      visibleState = <MedicationCreate />
-    } else if (this.props.displayState.display === c.APPOINTMENT_LIST) {
-      visibleState = <AppointmentList />
-    } else if (this.props.displayState.display === c.APPOINTMENT_DETAIL) {
-      visibleState = <AppointmentDetail />
-    } else if (this.props.displayState.display === c.APPOINTMENT_EDIT) {
-      visibleState = <AppointmentEdit />
-    } else if (this.props.displayState.display === c.APPOINTMENT_CREATE) {
-      visibleState = <AppointmentCreate />
-    } else if (this.props.displayState.display === c.QOL_LIST) {
-      visibleState = <QoLList />
-    } else if (this.props.displayState.display === c.QOL_DETAIL) {
-      visibleState = <QoLDetail />
-    } else if (this.props.displayState.display === c.QOL_CREATE) {
-      visibleState = <QoLCreate />
-    } else if (this.props.displayState.display === c.QOL_EDIT) {
-      visibleState = <QoLEdit />
+      if(this.props.displayState.display === c.WELCOME_SCREEN) {
+        visibleState= <WelcomeScreen  goHome = {this.goHome}/>
+      } else if (this.props.displayState.display === c.HOME_SCREEN) {
+        visibleState = <Home />
+      } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {
+        visibleState = <Calendar />
+      } else if (this.props.displayState.display === c.MEDICATION_LIST) {
+        visibleState = <MedicationList />
+      } else if (this.props.displayState.display === c.MEDICATION_DETAIL) {
+        visibleState = <MedicationDetail />
+      } else if (this.props.displayState.display === c.MEDICATION_EDIT) {
+        visibleState = <MedicationEdit />
+      } else if (this.props.displayState.display === c.MEDICATION_CREATE) {
+        visibleState = <MedicationCreate />
+      } else if (this.props.displayState.display === c.APPOINTMENT_LIST) {
+        visibleState = <AppointmentList />
+      } else if (this.props.displayState.display === c.APPOINTMENT_DETAIL) {
+        visibleState = <AppointmentDetail />
+      } else if (this.props.displayState.display === c.APPOINTMENT_EDIT) {
+        visibleState = <AppointmentEdit />
+      } else if (this.props.displayState.display === c.APPOINTMENT_CREATE) {
+        visibleState = <AppointmentCreate />
+      } else if (this.props.displayState.display === c.QOL_LIST) {
+        visibleState = <QoLList />
+      } else if (this.props.displayState.display === c.QOL_DETAIL) {
+        visibleState = <QoLDetail />
+      } else if (this.props.displayState.display === c.QOL_CREATE) {
+        visibleState = <QoLCreate />
+      } else if (this.props.displayState.display === c.QOL_EDIT) {
+        visibleState = <QoLEdit />
+      }
     }
 
     return(
