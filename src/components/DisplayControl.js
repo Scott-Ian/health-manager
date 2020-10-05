@@ -28,7 +28,7 @@ class DisplayControl extends React.Component {
     let visibleState ="";
 
     if(this.props.displayState.display === c.WELCOME_SCREEN) {
-      visibleState= <WelcomeScreen  goHome = {goHome}/>
+      visibleState= <WelcomeScreen  goHome = {this.goHome}/>
     } else if (this.props.displayState.display === c.HOME_SCREEN) {
       visibleState = <Home />
     } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {
