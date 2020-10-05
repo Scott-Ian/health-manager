@@ -28,16 +28,14 @@ const rrfProps = {
 
 function App() {
   return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <ReactReduxFirebaseProvider { ... rrfProps} >
-          <View style={styles.container}>
-            <StatusBar style='dark' />
-            <DisplayControl />
-          </View>
-        </ReactReduxFirebaseProvider>
-      </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+      <ReactReduxFirebaseProvider { ... rrfProps} >
+        <View style={styles.container}>
+          <StatusBar style='dark' />
+          <DisplayControl />
+        </View>
+      </ReactReduxFirebaseProvider>
+    </Provider>
   )
 }
 
