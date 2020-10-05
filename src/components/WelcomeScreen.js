@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { ImageBackground, StyleSheet, View, Text, Image, Button } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, Image, Button, TextInput } from 'react-native';
 import { welcomeScreen } from '../actions';
 import backgroundImage from '../assets/background2.jpg';
 import colors from './../config/colors';
@@ -9,13 +9,40 @@ import firebase from 'firebase/app';
 
 function WelcomeScreen(props) {
 
-  const [formType, setFormType ] = useState(null);
+  // Sign In/Up form display state
+  const [ formType, setFormType ] = useState(null);
+  
+  // Sign In Text Value Storage
+  const [ signInEmail, setSignInEmail ] = useState(null);
+  const [ signInPassword, setSignInPassword ] = useState(null);
+
+  // SignUp Text Value Storage
+  const [ signUpEmail, setSignUpEmail ] = useState(null);
+  const [ signUpPassword, setSignUpPassword ] = useState(null);
+  const [ signUpPasswordConfirm, setSignUpPasswordConfirm ] = useState(null);
 
   function doSignUp(event) {
     event.preventDefault();
     const email= event.target.email.value;
+    const password = event.target.password.value;
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
+      console.log('Successfully signed up!');
+    }).catch(function(error) {
+      console.log(error.message);
+    });
   }
 
+  function doSignIn(event) {
+    event.preventDefault();
+    const email = event.target.signinEmail.value;
+    const password = event.target.signinPassword.value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      console.log('Successfully signed in!');
+    }).catch(function(error) {
+      console.log(error.message)
+    });
+  }
 
 
   // Sign in display
@@ -28,12 +55,26 @@ function WelcomeScreen(props) {
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
           <Text>Take Charge of Your Health Journey</Text>
         </View>
+        
+        <Text>Email:</Text>
+        <TextInput
+          style={styles.email}
+          onChangeText = {text => setSignInEmail(text)}
+          value = 'Email'
+        />
+
+        <Text>Password:</Text>
+        <TextInput
+          style={styles.email}
+          onChangeText = {text => setSignInPassword(text)}
+          secureTextEntry = {true}
+          value = 'Email'
+        />
+
         <View style={styles.loginButton} >
-          <Text>Button will be here!</Text>
+          <Button onPress={doSignIn} title="Sign In" color={colors.primary} />
         </View>
-        <View style={styles.registerButton} >
-          <Text>Button will be here!</Text>
-        </View>
+
       </ImageBackground>
     )
   }
@@ -109,6 +150,16 @@ const styles = StyleSheet.create({
     top: 80,
     alignItems: 'center',
   },
+  email: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1 
+  },
+  password: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1
+  }
 });
 
 welcomeScreen.propTypes = {
