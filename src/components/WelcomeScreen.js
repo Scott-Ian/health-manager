@@ -6,12 +6,12 @@ import backgroundImage from '../assets/background2.jpg';
 import colors from './../config/colors';
 import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
-import { REACT_APP_FIREBASE_API_KEY } from 'react-native-dotenv';
+import { SOME_KEY } from 'react-native-dotenv';
 
 function WelcomeScreen(props) {
   console.log('Things:');
 
-  console.log(REACT_APP_FIREBASE_API_KEY);
+  console.log(SOME_KEY);
 
   // for (const key in process.env) {
   //   console.log(key);
