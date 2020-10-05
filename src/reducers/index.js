@@ -8,3 +8,5 @@ const rootReducer = combineReducers({
   displayState: displayReducer,
   firestore: firestoreReducer,
 })
+
+export default rootReducer;
