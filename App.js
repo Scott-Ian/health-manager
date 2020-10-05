@@ -6,11 +6,15 @@ import { createFirestoreInstance } from 'redux-firestore';
 import firebase from './src/firebase';
 import 'firebase/auth';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
+import { Dimensions, StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
 import DisplayControl from './src/components/DisplayControl';
 import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer);
+
+// This dimension logic should be re-called if orientation is flipped
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const rrfProps = {
   firebase,
@@ -26,6 +30,7 @@ function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
+        {/* <StatusBar style='light' /> */}
         <DisplayControl />
       </View>
     </Provider>
@@ -39,8 +44,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    height: "100vh",
-    width: "100vw",
+    height: windowHeight,
+    width: windowWidth,
   },
 });
 
