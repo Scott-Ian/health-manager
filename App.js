@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 import  rootReducer from './src/reducers/index';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
-import firebase from './firebase';
+import firebase from './src/firebase';
 import 'firebase/auth';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
