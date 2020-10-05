@@ -1,28 +1,81 @@
 import * as c from './../actions/ActionTypes';
 
+const defaultState = {
+  display : c.WELCOME_SCREEN,
+  medicationId: null,
+  appointmentId: null,
+  qolId: null,
+}
+
 // Strings in these switch cases correspond to names of components to be rendered
-export default (state = {display:'WelcomePage'}, action) => {
-  //const {} = action;
+export default (state = defaultState, action) => {
+  const {medicationId, appointmentId, qolId} = action;
   switch(action.type) {
-    case c.EDIT_KOMBUCHA:
+    case c.WELCOME_SCREEN:
       return ({
-        display: 'EditKombuchaForm',
-        kombuchaId
+        display: c.WELCOME_SCREEN,
       });
-    case c.KOMBUCHA_DETAIL:
+    case c.HOME_SCREEN:
       return ({
-        display: 'KombuchaDetail',
-        kombuchaId
+        display: c.HOME_SCREEN,
       });
-    case c.CREATE_KOMBUCHA:
+    case c.CALENDAR_SCREEN:
       return ({
-        display: 'CreateKombuchaForm',
-        kombuchaId
+        display: c.CALENDAR_SCREEN,
       });
-    case c.KOMBUCHA_LIST:
+    case c.MEDICATION_LIST:
       return ({
-        display: 'KombuchaList',
-        kombuchaId
+        display: c.MEDICATION_LIST,
+      });
+    case c.MEDICATION_DETAIL:
+      return ({
+        display: c.MEDICATION_DETAIL,
+        medicationId
+      });
+    case c.MEDICATION_EDIT:
+      return ({
+        display: c.MEDICATION_EDIT,
+        medicationId
+      });
+    case c.MEDICATION_CREATE:
+      return ({
+        display: c.MEDICATION_CREATE,
+      });
+    case c.APPOINTMENT_LIST:
+      return ({
+        display: c.APPOINTMENT_LIST,
+      });
+    case c.APPOINTMENT_DETAIL:
+      return ({
+        display: c.APPOINTMENT_DETAIL,
+        appointmentId
+      });
+    case c.APPOINTMENT_EDIT:
+      return ({
+        display: c.APPOINTMENT_EDIT,
+        appointmentId
+      });
+    case c.APPOINTMENT_CREATE:
+      return ({
+        display: c.APPOINTMENT_CREATE,
+      });
+    case c.QOL_LIST:
+      return ({
+        display: c.QOL_LIST,
+      });
+    case c.QOL_DETAIL:
+      return ({
+        display: c.QOL_DETAIL,
+        qolId
+      });
+    case c.QOL_EDIT:
+      return ({
+        display: c.QOL_EDIT,
+        qolId
+      });
+    case c.QOL_CREATE:
+      return ({
+        display: c.QOL_CREATE,
       });
     default:
       return state;
