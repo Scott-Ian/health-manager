@@ -7,17 +7,21 @@ import colors from './../config/colors';
 import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
 import { SOME_KEY } from 'react-native-dotenv';
+import * as rnd from 'react-native-dotenv';
 
 function WelcomeScreen(props) {
   console.log('Things:');
 
   console.log(SOME_KEY);
 
+  console.log('RND');
+  console.log(rnd);
+
   // for (const key in process.env) {
   //   console.log(key);
   //   console.log(process.env[key])
   // }
-  console.log(`${process.env.REACT_APP_FIREBASE_DATABASE_URL}`);
+  // console.log(`${process.env.REACT_APP_FIREBASE_DATABASE_URL}`);
   // Sign In/Up form display state and error text hooks
   const [ formType, setFormType ] = useState(null);
   const [ errorText, setErrorText ] = useState(null);

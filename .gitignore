@@ -12,6 +12,8 @@ web-build/
 .vscode
 node_modules/
 .env
+keys.js
+
 
 # macOS
 .DS_Store
