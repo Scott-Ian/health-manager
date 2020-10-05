@@ -9,6 +9,7 @@ import firebase from 'firebase/app';
 
 function WelcomeScreen(props) {
 
+  console.log(`${process.env.REACT_APP_FIREBASE_API_KEY}`);
   // Sign In/Up form display state and error text hooks
   const [ formType, setFormType ] = useState(null);
   const [ errorText, setErrorText ] = useState(null);
@@ -70,12 +71,14 @@ function WelcomeScreen(props) {
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignInEmail(text)}
+          textContentType = {"emailAddress"}
         />
         <Text>Password:</Text>
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignInPassword(text)}
           secureTextEntry = {true}
+          textContentType = {'password'}
         />
 
         <View style={styles.loginButton} >
@@ -99,17 +102,19 @@ function WelcomeScreen(props) {
         
         <Text style={styles.header}>Sign Up!</Text>
         <Text>{errorText}</Text>
-        
+
         <Text>Email:</Text>
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignUpEmail(text)}
+          textContentType = {"emailAddress"}
         />
         <Text>Password:</Text>
         <TextInput
           style={styles.email}
           onChangeText = {text => setSignUpPassword(text)}
           secureTextEntry = {true}
+          textContentType = {"password"}
         />
 
         <Text>Confirm Password:</Text>
@@ -117,6 +122,7 @@ function WelcomeScreen(props) {
           style={styles.email}
           onChangeText = {text => setSignUpPasswordConfirm(text)}
           secureTextEntry = {true}
+          textContentType = {"password"}
         />
 
         <View style={styles.registerButton} >
@@ -139,7 +145,7 @@ function WelcomeScreen(props) {
 
         {/* <Button onPress={props.goHome} title="Home Page" color={colors.primary} /> */}
         <View style={styles.loginButton} >
-          <Button onPress={() => setFormType("Sign In")} title="Sign In" color={colors.primary} />
+          <Button onPress={() => setFormType("Sign In")} title="Sign In" color={colors.secondary} />
         </View>
         <View style={styles.registerButton} >
           <Button onPress={() => setFormType("Sign Up")} title="Sign Up" color={colors.primary} />
@@ -158,12 +164,12 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   loginButton: {
-    width: '100%',
+    width: 140,
     height: 70,
     backgroundColor: colors.primary,
   },
   registerButton: {
-    width: '100%',
+    width: 140,
     height: 70,
     backgroundColor: colors.secondary,
   },
@@ -178,11 +184,13 @@ const styles = StyleSheet.create({
   },
   email: {
     height: 40,
+    width: 250,
     borderColor: 'gray',
     borderWidth: 1 
   },
   password: {
     height: 40,
+    width: 250,
     borderColor: 'gray',
     borderWidth: 1
   },
@@ -192,8 +200,8 @@ const styles = StyleSheet.create({
   }
 });
 
-welcomeScreen.propTypes = {
-  goHome: PropTypes.func,
-}
+// welcomeScreen.propTypes = {
+//   goHome: PropTypes.func,
+// }
 
 export default WelcomeScreen;
