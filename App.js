@@ -30,7 +30,7 @@ function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        {/* <StatusBar style='light' /> */}
+        <StatusBar style='dark' />
         <DisplayControl />
       </View>
     </Provider>

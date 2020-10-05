@@ -18,11 +18,17 @@ class DisplayControl extends React.Component {
     
   }
 
+  goHome = () => {
+    const { dispatch } = this.props;
+    const action = a.homeScreen();
+    dispatch(action);
+  }
+
   render() {
     let visibleState ="";
 
     if(this.props.displayState.display === c.WELCOME_SCREEN) {
-      visibleState= <WelcomeScreen />
+      visibleState= <WelcomeScreen  goHome = {goHome}/>
     } else if (this.props.displayState.display === c.HOME_SCREEN) {
       visibleState = <Home />
     } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {

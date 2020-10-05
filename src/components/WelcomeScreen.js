@@ -1,7 +1,9 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Text, Image } from 'react-native';
-import backgroundImage from '../assets/background.jpg';
+import { ImageBackground, StyleSheet, View, Text, Image, Button } from 'react-native';
+import { welcomeScreen } from '../actions';
+import backgroundImage from '../assets/background2.jpg';
 import colors from './../config/colors';
+import PropTypes from 'prop-types';
 
 function WelcomeScreen(props) {
 
@@ -13,6 +15,8 @@ function WelcomeScreen(props) {
         <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
         <Text>Take Charge of Your Health Journey</Text>
       </View>
+
+      <Button onPress={props.goHome} title="Home Page" color={colors.primary} />
       <View style={styles.loginButton} >
         <Text>Button will be here!</Text>
       </View>
@@ -51,5 +55,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+welcomeScreen.propTypes = {
+  goHome: PropTypes.func,
+}
 
 export default WelcomeScreen;
