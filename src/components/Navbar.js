@@ -1,12 +1,30 @@
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import colors from './../config/colors';
-import { StyleSheet, View, Text, Image, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text, Button, } from 'react-native';
+import * as a from '../actions/index';
+import { connect } from 'react-redux';
 
 function Navbar (props) {
   const { dispatch } = props;
   
   function pressHome() {
-    
+    const action = a.homeScreen();
+    dispatch(action);
+  }
+
+  function pressMedication() {
+    const action = a.medicationList();
+    dispatch(action);
+  }
+
+  function pressAppointment() {
+    const action = a.appointmentList();
+    dispatch(action);
+  }
+
+  function pressQol() {
+    const action = a.qolList();
+    dispatch(action);
   }
 
   return(
@@ -40,3 +58,18 @@ const styles = StyleSheet.create({
   }
 
 });
+
+
+Navbar.propTypes = {
+  displayState: PropTypes.object,
+}
+
+const mapStateToProps = state => {
+  return{
+    displayState: state.displayState,
+  }
+}
+
+Navbar = connect(mapStateToProps)(Navbar);
+
+export default Navbar;
