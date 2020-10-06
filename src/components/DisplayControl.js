@@ -10,6 +10,7 @@ import { View, Text } from 'react-native';
 import WelcomeScreen from './WelcomeScreen';
 import Home from './Home';
 import Calendar from './Calendar';
+import Navbar from './Navbar';
 
 // Appointment Screens
 import AppointmentCreate from './appointment/AppointmentCreate';
@@ -98,6 +99,7 @@ class DisplayControl extends React.Component {
     return(
       <View>
         {visibleState}
+        <Navbar />
       </View>
     )
     }
