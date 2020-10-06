@@ -1,8 +1,8 @@
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import colors from './../config/colors';
 import { StyleSheet, View, Text, Button, } from 'react-native';
 import * as a from '../actions/index';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function Navbar (props) {
   const { dispatch } = props;
