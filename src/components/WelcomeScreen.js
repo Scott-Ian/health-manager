@@ -71,21 +71,23 @@ function WelcomeScreen(props) {
           <Text style={styles.slogan}>Take Charge of Your Health Journey</Text>
         </View>
         
-        <Text style={styles.header}>Sign In!</Text>
-        <Text>{errorText}</Text>
-        <Text>Email:</Text>
-        <TextInput
-          style={styles.email}
-          onChangeText = {text => setSignInEmail(text)}
-          textContentType = {"emailAddress"}
-        />
-        <Text>Password:</Text>
-        <TextInput
-          style={styles.email}
-          onChangeText = {text => setSignInPassword(text)}
-          secureTextEntry = {true}
-          textContentType = {'password'}
-        />
+        <View style={styles.form}>
+          <Text style={styles.header}>Sign In!</Text>
+          <Text>{errorText}</Text>
+          <Text>Email:</Text>
+          <TextInput
+            style={styles.email}
+            onChangeText = {text => setSignInEmail(text)}
+            textContentType = {"emailAddress"}
+          />
+          <Text>Password:</Text>
+          <TextInput
+            style={styles.email}
+            onChangeText = {text => setSignInPassword(text)}
+            secureTextEntry = {true}
+            textContentType = {'password'}
+          />
+        </View>
 
         <View style={styles.loginButton} >
           <Button onPress={doSignIn} title="Sign In" color={colors.primary} />
@@ -104,22 +106,24 @@ function WelcomeScreen(props) {
           <Text style={styles.slogan}>Take Charge of Your Health Journey</Text>
         </View>
         
-        <Text style={styles.header}>Sign Up!</Text>
-        <Text>{errorText}</Text>
+        <View style={styles.form}>
+          <Text style={styles.header}>Sign Up!</Text>
+          <Text>{errorText}</Text>
 
-        <Text>Email:</Text>
-        <TextInput
-          style={styles.email}
-          onChangeText = {text => setSignUpEmail(text)}
-          textContentType = {"emailAddress"}
-        />
-        <Text>Password:</Text>
-        <TextInput
-          style={styles.email}
-          onChangeText = {text => setSignUpPassword(text)}
-          secureTextEntry = {true}
-          textContentType = {"password"}
-        />
+          <Text>Email:</Text>
+          <TextInput
+            style={styles.email}
+            onChangeText = {text => setSignUpEmail(text)}
+            textContentType = {"emailAddress"}
+          />
+          <Text>Password:</Text>
+          <TextInput
+            style={styles.email}
+            onChangeText = {text => setSignUpPassword(text)}
+            secureTextEntry = {true}
+            textContentType = {"password"}
+          />
+        </View>
 
         <Text>Confirm Password:</Text>
         <TextInput
@@ -176,7 +180,7 @@ const styles = StyleSheet.create({
     width: 140,
     height: 45,
     backgroundColor: colors.secondary,
-    paddingBottom: 200,
+    paddingBottom: 45,
     paddingTop: 15,
   },
   logo: {
@@ -192,7 +196,8 @@ const styles = StyleSheet.create({
     height: 40,
     width: 250,
     borderColor: 'gray',
-    borderWidth: 1 
+    borderWidth: 1 ,
+    paddingBottom: 20,
   },
   password: {
     height: 40,
@@ -203,10 +208,15 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 20,
     textDecorationLine: 'underline',
+    alignSelf: 'center',
   },
   slogan: {
     paddingTop: 40,
     fontSize: 20,
+  },
+  form: {
+    paddingBottom: 45,
+    alignContent: 'center',
   }
 });
 
