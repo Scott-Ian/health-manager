@@ -56,7 +56,7 @@ function WelcomeScreen(props) {
   }
 
   function updateDisplay() {
-    const { dispatch } = this.props;
+    const { dispatch } = props;
     const action = a.homeScreen();
     dispatch(action);
   }
