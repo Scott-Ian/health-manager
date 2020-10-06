@@ -9,6 +9,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Dimensions, StyleSheet, Text, View, Image, SafeAreaView, Platform} from 'react-native';
 import DisplayControl from './src/components/DisplayControl';
 import { Provider } from 'react-redux';
+import colors from './src/config/colors';
 
 const store = createStore(rootReducer);
 
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
     paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0,
     height: windowHeight,
     width: windowWidth,
+    backgroundColor: colors.background,
   },
 });
 

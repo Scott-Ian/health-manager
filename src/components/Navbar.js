@@ -44,14 +44,14 @@ function Navbar (props) {
         </View>
     </View>
   )
-
 }
 
-
+// Will space-around and flex-end conflict?
 const styles = StyleSheet.create({
   navbar: {
     flex: 1,
     justifyContent: "space-around",
+    justifyContent: "flex-end",
     height: 20,
     width: "100%",
     alignItems: "center",

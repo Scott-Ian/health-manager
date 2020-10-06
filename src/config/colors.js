@@ -3,4 +3,5 @@ export default {
   secondary: '#4ecdc4',
   navbar: 'gray',
   navbutton: 'black',
+  background: 'blue',
 }
