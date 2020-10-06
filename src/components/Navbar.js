@@ -30,13 +30,16 @@ function Navbar (props) {
   return(
     <View style={styles.navbar}>
         <View style={styles.buttonCover}>
-          <Button onPress={() => setFormType("Sign Up")} title="Sign Up" color={colors.primary} />
+          <Button onPress={pessHome} title="Home" color={colors.primary} />
         </View>
         <View style={styles.buttonCover}>
-          <Button onPress={() => setFormType("Sign Up")} title="Sign Up" color={colors.primary} />
+          <Button onPress={pressMedication} title="Meds" color={colors.primary} />
         </View>
         <View style={styles.buttonCover}>
-          <Button onPress={() => setFormType("Sign Up")} title="Sign Up" color={colors.primary} />
+          <Button onPress={pressAppointment} title="Apps" color={colors.primary} />
+        </View>
+        <View style={styles.buttonCover}>
+          <Button onPress={pressQol} title="QoL" color={colors.primary} />
         </View>
     </View>
   )
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.navbar,
   },
   buttonCover: {
-
+    backgroundColor: colors.navbutton,
   }
 
 });
