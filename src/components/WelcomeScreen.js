@@ -132,7 +132,7 @@ function WelcomeScreen(props) {
         />
 
         <View style={styles.registerButton} >
-          <Button onPress={doSignUp} title="Sign In" color={colors.primary} />
+          <Button onPress={doSignUp} title="Register" color={colors.primary} />
         </View>
       </ImageBackground>
     )
@@ -149,7 +149,6 @@ function WelcomeScreen(props) {
           <Text>Take Charge of Your Health Journey</Text>
         </View>
 
-        {/* <Button onPress={props.goHome} title="Home Page" color={colors.primary} /> */}
         <View style={styles.loginButton} >
           <Button onPress={() => setFormType("Sign In")} title="Sign In" color={colors.secondary} />
         </View>
@@ -171,13 +170,15 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     width: 140,
-    height: 70,
+    height: 30,
     backgroundColor: colors.primary,
+    paddingBottom: 5,
   },
   registerButton: {
     width: 140,
-    height: 70,
+    height: 30,
     backgroundColor: colors.secondary,
+    paddingBottom: 20
   },
   logo: {
     width: 100,

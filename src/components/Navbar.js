@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Button, } from 'react-native';
 import * as a from '../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 function Navbar (props) {
   const { dispatch } = props;
@@ -30,7 +31,7 @@ function Navbar (props) {
   return(
     <View style={styles.navbar}>
         <View style={styles.buttonCover}>
-          <Button onPress={pessHome} title="Home" color={colors.primary} />
+          <Button onPress={pressHome} title="Home" color={colors.primary} />
         </View>
         <View style={styles.buttonCover}>
           <Button onPress={pressMedication} title="Meds" color={colors.primary} />
@@ -51,10 +52,11 @@ const styles = StyleSheet.create({
   navbar: {
     flex: 1,
     justifyContent: "space-around",
-    height: "10%",
+    height: 20,
     width: "100%",
     alignItems: "center",
     backgroundColor: colors.navbar,
+    flexDirection: "row",
   },
   buttonCover: {
     backgroundColor: colors.navbutton,
