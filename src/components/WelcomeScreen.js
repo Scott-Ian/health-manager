@@ -32,7 +32,7 @@ function WelcomeScreen(props) {
       setErrorText("Passwords do not match!");
     } else {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-        console.log('Successfully signed up!');
+        console.log('Successfully Signed Up!');
         updateDisplay();
       }).catch(function(error) {
         console.log(error.message);
