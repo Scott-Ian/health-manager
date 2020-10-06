@@ -101,7 +101,7 @@ function WelcomeScreen(props) {
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
-          <Text>Take Charge of Your Health Journey</Text>
+          <Text style={styles.slogan}>Take Charge of Your Health Journey</Text>
         </View>
         
         <Text style={styles.header}>Sign Up!</Text>
@@ -143,7 +143,7 @@ function WelcomeScreen(props) {
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
-          <Text>Take Charge of Your Health Journey</Text>
+          <Text style={styles.slogan}>Take Charge of Your Health Journey</Text>
         </View>
 
         <View style={styles.loginButton} >
@@ -168,15 +168,16 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     width: 140,
-    height: 30,
+    height: 45,
     backgroundColor: colors.primary,
     paddingBottom: 5,
   },
   registerButton: {
     width: 140,
-    height: 30,
+    height: 45,
     backgroundColor: colors.secondary,
-    paddingBottom: 20
+    paddingBottom: 200,
+    paddingTop: 15,
   },
   logo: {
     width: 100,
@@ -202,6 +203,10 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 20,
     textDecorationLine: 'underline',
+  },
+  slogan: {
+    paddingTop: 40,
+    fontSize: 20,
   }
 });
 
