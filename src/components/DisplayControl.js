@@ -92,6 +92,7 @@ class DisplayControl extends React.Component {
         visibleState = <QoLEdit />
       } else {
         visibleState= <WelcomeScreen />
+      }
     }
 
     return(
@@ -99,7 +100,7 @@ class DisplayControl extends React.Component {
         {visibleState}
       </View>
     )
-  
+    }
 }
 
 DisplayControl.propTypes = {
