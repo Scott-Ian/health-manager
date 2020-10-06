@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
   },
   email: {
     height: 40,
-    width: 250,
+    width: 251,
     borderColor: 'gray',
     borderWidth: 1 ,
     paddingBottom: 20,
