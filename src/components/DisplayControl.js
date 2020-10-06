@@ -63,9 +63,7 @@ class DisplayControl extends React.Component {
     }
 
     if((isLoaded(auth)) && (auth.currentUser != null)) {
-      if (this.props.displayState.display === c.HOME_SCREEN) {
-        visibleState = <Home />
-      } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {
+      if (this.props.displayState.display === c.CALENDAR_SCREEN) {
         visibleState = <Calendar />
       } else if (this.props.displayState.display === c.MEDICATION_LIST) {
         visibleState = <MedicationList />
@@ -92,7 +90,7 @@ class DisplayControl extends React.Component {
       } else if (this.props.displayState.display === c.QOL_EDIT) {
         visibleState = <QoLEdit />
       } else {
-        visibleState= <WelcomeScreen />
+        visibleState = <Home />
       }
     }
 
