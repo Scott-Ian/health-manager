@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
 import { SOME_KEY } from 'react-native-dotenv';
 import * as rnd from 'react-native-dotenv';
+import * as a from '../actions/index';
 
 function WelcomeScreen(props) {
   console.log('Things:');
@@ -46,6 +47,7 @@ function WelcomeScreen(props) {
     } else {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
         console.log('Successfully signed up!');
+        updateDisplay();
       }).catch(function(error) {
         console.log(error.message);
         setErrorText(error.message);
@@ -60,10 +62,17 @@ function WelcomeScreen(props) {
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log('Successfully signed in!');
+      updateDisplay();
     }).catch(function(error) {
       console.log(error.message);
       setErrorText(error.message);
     });
+  }
+
+  function updateDisplay() {
+    const { dispatch } = this.props;
+    const action = a.homeScreen();
+    dispatch(action);
   }
 
   // Sign in display

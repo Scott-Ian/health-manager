@@ -1,7 +1,7 @@
 import * as c from './../actions/ActionTypes';
 
 const defaultState = {
-  display : c.WELCOME_SCREEN,
+  display : null,
   medicationId: null,
   appointmentId: null,
   qolId: null,
