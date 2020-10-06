@@ -211,8 +211,17 @@ const styles = StyleSheet.create({
   }
 });
 
-// welcomeScreen.propTypes = {
-//   goHome: PropTypes.func,
-// }
+
+WelcomeScreen.propTypes = {
+  displayState: PropTypes.object,
+}
+
+const mapStateToProps = state => {
+  return{
+    displayState: state.displayState,
+  }
+}
+
+WelcomeScreen = connect(mapStateToProps)(WelcomeScreen);
 
 export default WelcomeScreen;
