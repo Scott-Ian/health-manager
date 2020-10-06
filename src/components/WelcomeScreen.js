@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { KeyboardAvoidingView, StyleSheet, View, Text, Image, Button, TextInput } from 'react-native';
-import backgroundImage from '../assets/background.jpg';
 import colors from './../config/colors';
 import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
