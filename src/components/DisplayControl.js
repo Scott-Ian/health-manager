@@ -56,7 +56,7 @@ class DisplayControl extends React.Component {
     if((isLoaded(auth)) && (auth.currentUser == null)) {
       return (
         <View>
-          <WelcomeScreen.js />
+          <WelcomeScreen />
         </View>
       )
     }
