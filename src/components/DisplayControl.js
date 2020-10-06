@@ -9,6 +9,25 @@ import { View, Text } from 'react-native';
 // Screen imports
 import WelcomeScreen from './WelcomeScreen';
 import Home from './Home';
+import Calendar from './Calendar';
+
+// Appointment Screens
+import AppointmentCreate from './appointment/AppointmentCreate';
+import AppointmentDetail from './appointment/AppointmentDetail';
+import AppointmentEdit from './appointment/AppointmentEdit';
+import AppointmentList from './appointment/AppointmentList';
+
+// Medication Screens
+import MedicationCreate from './medication/MedicationCreate';
+import MedicationDetail from './medication/MedicationDetail';
+import MedicationEdit from './medication/MedicationEdit';
+import MedicationList from './medication/MedicationList';
+
+// QoL Screens
+import QoLCreate from './qol/QoLCreate';
+import QoLDetail from './qol/QoLDetail';
+import QoLEdit from './qol/QoLEdit';
+import QoLList from './qol/QoLList';
 
 
 class DisplayControl extends React.Component {
