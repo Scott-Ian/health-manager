@@ -62,10 +62,7 @@ class DisplayControl extends React.Component {
     }
 
     if((isLoaded(auth)) && (auth.currentUser != null)) {
-
-      if(this.props.displayState.display === c.WELCOME_SCREEN) {
-        visibleState= <WelcomeScreen  goHome = {this.goHome}/>
-      } else if (this.props.displayState.display === c.HOME_SCREEN) {
+      if (this.props.displayState.display === c.HOME_SCREEN) {
         visibleState = <Home />
       } else if (this.props.displayState.display === c.CALENDAR_SCREEN) {
         visibleState = <Calendar />
@@ -93,7 +90,8 @@ class DisplayControl extends React.Component {
         visibleState = <QoLCreate />
       } else if (this.props.displayState.display === c.QOL_EDIT) {
         visibleState = <QoLEdit />
-      }
+      } else {
+        visibleState= <WelcomeScreen />
     }
 
     return(
@@ -101,7 +99,7 @@ class DisplayControl extends React.Component {
         {visibleState}
       </View>
     )
-  }
+  
 }
 
 DisplayControl.propTypes = {
