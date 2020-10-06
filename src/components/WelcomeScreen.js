@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { ImageBackground, StyleSheet, View, Text, Image, Button, TextInput } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, View, Text, Image, Button, TextInput } from 'react-native';
 import backgroundImage from '../assets/background.jpg';
 import colors from './../config/colors';
 import PropTypes from 'prop-types';
@@ -64,7 +64,7 @@ function WelcomeScreen(props) {
   // Sign in display
   if (formType === "Sign In") {
     return (
-      <View 
+      <KeyboardAvoidingView behavior='padding' 
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -92,14 +92,14 @@ function WelcomeScreen(props) {
         <View style={styles.loginButton} >
           <Button onPress={doSignIn} title="Sign In" color={colors.primary} />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 
   // Sign up display
   else if (formType === "Sign Up") {
     return (
-      <View 
+      <KeyboardAvoidingView behavior='padding'
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -136,14 +136,14 @@ function WelcomeScreen(props) {
         <View style={styles.registerButton} >
           <Button onPress={doSignUp} title="Register" color={colors.primary} />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 
   // Default sign-in display
   else {
     return (
-      <View 
+      <KeyboardAvoidingView behavior='padding' 
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -156,7 +156,7 @@ function WelcomeScreen(props) {
         <View style={styles.registerButton} >
           <Button onPress={() => setFormType("Sign Up")} title="Sign Up" color={colors.primary} />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 }
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     width: 140,
     height: 45,
     backgroundColor: colors.secondary,
-    paddingBottom: 45,
+    paddingBottom: 150,
     paddingTop: 15,
   },
   logo: {
