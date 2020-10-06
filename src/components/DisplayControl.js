@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as a from './../actions/index';
 import * as c from './../actions/ActionTypes';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 // Screen imports
 import WelcomeScreen from './WelcomeScreen';
@@ -27,6 +27,14 @@ class DisplayControl extends React.Component {
     const auth = this.props.firebase.auth();
     let visibleState;
     if(!isLoaded(auth)) {
+      return (
+        <View>
+          <Text>Loading...</Text>
+        </View>
+      )
+    }
+
+    if((isLoaded(auth)) && (auth.currentUser == null)) {
       return (
         <View>
           <WelcomeScreen.js />
