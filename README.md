@@ -15,7 +15,13 @@
 
 # **REQUIREMENTS**
 
+* This project uses the [expo cli](https://expo.io/)
+* To launch and run this program, you will require an IOS/Android Emulator, or to download the expo cli app for your mobile device. 
+
 # **SETUP**
+
+* This project also requires an active firebase-firestore database. Please follow [these instructions](https://www.learnhowtoprogram.com/react/react-with-nosql/setting-up-a-firebase-project) to set up and create your Firestore database.
+* Once your firestore databse is establishes, you will need to store your unique database api keys in a unique file detailed below.
 
 ## **CLONING**
 
@@ -23,7 +29,7 @@
 
 ![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone.gif 'How to clone repo')
 
-* Paste the link in the field provided by VsCode as thown in the image below
+* Paste the link in the field provided by VsCode as shown in the image below
 
 * You will be prompted to open the directory once you have cloned it. Select 'open'
 
@@ -33,11 +39,21 @@
 
 # **PROTECTING YOUR DATA**
 
-* Step 1: create a .gitignore file in the top level of your project directory. populate the file as shown in step 1 of the image below.
+* After retrieving your database api keys as described in the link above, you must create a 'keys.js' file in the 'src' directory and sub in your keys as listed below:
 
-* Step 2: commit that .gitignore file (this prevents your sensitive information like your API key being shown to others). **DO NOT PROCEED UNTIL YOU DO THIS!**
+```js
+const keys = {
+  REACT_APP_FIREBASE_API_KEY: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_AUTH_DOMAIN: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_DATABASE_URL: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_PROJECT_ID: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_STORAGE_BUCKET: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_MESSAGING_SENDER_ID: "YOUR DB INFO HERE",
+  REACT_APP_FIREBASE_APP_ID: "YOUR DB INFO HERE",
+}
 
-![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image-3.jpg 'Set up instructions')
+export default keys;
+```
 
 <br>
 
@@ -136,49 +152,6 @@
   * project README!
 
 
-
-  
-<h1 align='center'><img width='900' height='450' src='https://s.yimg.com/uu/api/res/1.2/WTWAYqx40DQsHLABw9ue8Q--~B/aD01NTg7dz05OTI7c209MTthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/us.abcnews.gma.com/51c57d0dd7f9bd4ccf3a3a8232d025bb'><br>
-
-
-**<h1 align = 'center'>quiz show**
-
-
-*<h2 align ='center'>Test your trivia knowledge!*
-
-
-<h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#❤️contributors'> Contributors</a> •<a href='#protecting-your-data'> Protecting Data</a> •<a href='#cloning'> Cloning</a></h3>
-
-
-<h3 align='center'>An application exercise through the Epicodus School to demonstrate practical knowledge of React Redux with Firestore.</h3>
-
-# **REQUIREMENTS**
-
-# **SETUP**
-
-## **CLONING**
-
-* Copy the repo link as shown in the image below
-
-![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone.gif 'How to clone repo')
-
-* Paste the link in the field provided by VsCode as thown in the image below
-
-* You will be prompted to open the directory once you have cloned it. Select 'open'
-
-![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone-github2.gif 'Cloning from Github within VSCode')
-
-<br>
-
-# **PROTECTING YOUR DATA**
-
-* Step 1: create a .gitignore file in the top level of your project directory. populate the file as shown in step 1 of the image below.
-
-* Step 2: commit that .gitignore file (this prevents your sensitive information like your API key being shown to others). **DO NOT PROCEED UNTIL YOU DO THIS!**
-
-![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image-3.jpg 'Set up instructions')
-
-<br>
 
 # **TECHNOLOGIES USED**
 
