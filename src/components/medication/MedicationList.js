@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, Button } from 'react-native';
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { useFirestoreConnect } from 'react-redux-firebase';
 import colors from '../../config/colors';
-import { useSelector } from 'react-redux';
 import * as a from '../../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,11 +17,6 @@ function MedicationList(props) {
   const currentUserEmail = auth.currentUser.email;
 
   const medications = props.firestore.data.medications
-  // const medications = useSelector(state => state.firestore.ordered.medications);
-    //.filter(medication => medication.userEmail === currentUserEmail);
-  
-  console.log("Medications:")
-  console.log(medications)
 
   const filterObjectToArray = function(object, currentUserEmail) {
     let result = [];
@@ -38,8 +32,7 @@ function MedicationList(props) {
   }
 
   const filteredMedications = filterObjectToArray(medications, currentUserEmail);
-    console.log("Filtered Medications:")
-    console.log(filteredMedications);
+
   function pressNew() {
     const { dispatch } = props;
     const action = a.medicationCreate();
