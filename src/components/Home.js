@@ -17,11 +17,11 @@ function Home (props) {
       <View style={styles.announcementContainer} >
         <View style={styles.announcement}>
           <Text>Next Appointment:</Text>
-          <Text>App Info Here!</Text>
+          <Text>10/23/2020 with Dr. Wolfe</Text>
         </View>
 
         <View style={styles.altAnnouncement}>
-          <Text>Next Refil:</Text>
+          <Text>Next Refill:</Text>
           <Text>Albuterol Inhaler: 11/27/2020</Text>
         </View>
 
