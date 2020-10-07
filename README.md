@@ -8,7 +8,7 @@
 *<h2 align ='center'>Take Charge of Your Health Journey!*
 
 
-<h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#❤️contributors'> Contributors</a> •<a href='#protecting-your-data'> Protecting Data</a> •<a href='#cloning'> Cloning</a></h3>
+<h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#author:'> Author</a> •<a href='#protecting-your-data'> Protecting Data</a> •<a href='#cloning'> Cloning</a></h3>
 
 
 <h3 align='center'>An Epicodus Capstone project</h3>
@@ -174,7 +174,7 @@ with the root project folder open in your code editor, execute the following in 
 
 <br>
 
-# **Authored By:**
+# **Author**
 
 [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/ian-scott.jpeg' width='160px;'/><br /><sub><b>Ian Scott</b></sub>](https://www.linkedin.com/in/ian-scott-portland-or/)<br />
 
