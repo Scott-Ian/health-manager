@@ -16,7 +16,7 @@ function MedicationList(props) {
 
   return(
     <View>
-      <Text>MedicationList Screen!</Text>
+      <Text>Medication List Screen!</Text>
 
 
     </View>
