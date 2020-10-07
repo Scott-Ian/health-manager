@@ -11,7 +11,10 @@
 <h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#❤️contributors'> Contributors</a> •<a href='#protecting-your-data'> Protecting Data</a> •<a href='#cloning'> Cloning</a></h3>
 
 
-<h3 align='center'>An application exercise through the Epicodus School to demonstrate practical knowledge of React Redux with Firestore.</h3>
+<h3 align='center'>An Epicodus Capstone project</h3>
+
+# **Project Proposal / Overview**
+ _This application is intended to assist users in taking charge of and managing their health, by providing a centralized cloud-based solution for keeping track of, taking notes on, and mapping out, medications, medical appointments, and measuring day to day quality of life. The intended user of this application is someone dealing with chronic illness, or their caretaker. In order to make this accessible during medical appointments, application will be a mobile application and store data in the Firestore cloud database._
 
 # **REQUIREMENTS**
 
@@ -58,10 +61,6 @@ export default keys;
 <br>
 
 
-
-## Project Proposal / Overview
- _This application is intended to assist users in taking charge of and managing their health, by providing a centralized cloud-based solution for keeping track of, taking notes on, and mapping out, medications, medical appointments, and measuring day to day quality of life. The intended user of this application is someone dealing with chronic illness, or their caretaker. In order to make this accessible during medical appointments, application will be a mobile application._
-
  ## User Stories
 
  ### Medication List
@@ -97,25 +96,10 @@ export default keys;
 
  ### Home Layout Mockup
  ![HomeScreen Layout](./ReadmeImg/HomeLayout.JPG)
+ * Not implemented!
 
  ### Component Scaffolding
   ![Component Scaffolding](./ReadmeImg/ComponentScaffolding.jpg)
-
-  ## Technologies
-  * React-native
-  * JavaScript
-  * React-redux
-  * Redux
-  * CSS
-  * HTML
-  * Flexbox
-  * Bootstrap
-  * Expo.io
-  * Jest
-  * API Calls
-  * react-native-community/hooks
-  * Firebase/Firestore
-
 
   ## ToDo List
 
@@ -132,9 +116,6 @@ export default keys;
   ## API Information
 
   * Drug Adverse Effects: https://open.fda.gov/apis/drug/event/
-
-  ## Resources
-  * React Native Tutorial: https://www.youtube.com/watch?v=0-S5a0eXPoc&ab_channel=ProgrammingwithMosh
 
 
   # ToDo List
@@ -170,6 +151,8 @@ _[Webpack](https://webpack.js.org/)_
 _[Visual Studio Code](https://code.visualstudio.com/)_
 
 _[React](https://reactjs.org/)_
+
+_[React Native](https://reactnative.dev/)_
 
 _[Redux](https://redux.js.org/)_
 
