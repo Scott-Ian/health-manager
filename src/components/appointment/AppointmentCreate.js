@@ -14,7 +14,7 @@ function AppointmentCreate(props) {
   const [ physician, setPhysician ] = useState(null);
   const [ dateTime, setDateTime ] = useState(null);
   const [ purpose, setPurpose ] = useState(null);
-  const [ location, Location ] = useState(null);
+  const [ location, setLocation ] = useState(null);
 
   const firestore = useFirestore();
 
