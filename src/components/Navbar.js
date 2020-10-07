@@ -49,10 +49,8 @@ function Navbar (props) {
 // Will space-around and flex-end conflict?
 const styles = StyleSheet.create({
   navbar: {
-    flex: 1,
     justifyContent: "space-around",
-    justifyContent: "flex-end",
-    height: 20,
+    height: 40,
     width: "100%",
     alignItems: "center",
     backgroundColor: colors.navbar,

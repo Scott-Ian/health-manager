@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as a from './../actions/index';
 import * as c from './../actions/ActionTypes';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 // Screen imports
 import WelcomeScreen from './WelcomeScreen';
@@ -95,13 +95,24 @@ class DisplayControl extends React.Component {
     }
 
     return(
-      <View>
+      <View style={styles.displayControl}>
         {visibleState}
-        <Navbar />
+        <Navbar style={styles.navbar} />
       </View>
     )
     }
 }
+
+const styles = StyleSheet.create({
+  navbar: {
+    height: 40,
+  },
+  displayControl: {
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+  }
+})
 
 DisplayControl.propTypes = {
   displayState: PropTypes.object,
