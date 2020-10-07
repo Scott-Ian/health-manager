@@ -5,14 +5,18 @@ import colors from '../../config/colors';
 import * as a from '../../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useFirestore } from 'react-redux-firebase';
 
 function MedicationCreate(props) {
 
+  // Hooks for managing user input
   const [ physician, setPhysician ] = useState(null);
   const [ datePrescribed, setDatePrescribed ] = useState(null);
   const [ dosage, setDosage ] = useState(null);
   const [ quantity, setQuantity ] = useState(null);
   const [ name, setName ] = useState(null);
+
+  const firestore = useFirestore();
 
   function addMedicationToFirestore() {
     firestore.collection('medications').add(
