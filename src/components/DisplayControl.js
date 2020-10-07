@@ -106,6 +106,7 @@ class DisplayControl extends React.Component {
 const styles = StyleSheet.create({
   navbar: {
     height: 40,
+    position: "absolute",
   },
   displayControl: {
     alignItems: 'center',
