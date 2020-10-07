@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, TextInput, KeyboardAvoidingView, StyleSheet, Button } from 'react-native';
+import { View, Text, TextInput, KeyboardAvoidingView, StyleSheet, Button, Platform } from 'react-native';
 import colors from '../../config/colors';
 import * as a from '../../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useFirestore } from 'react-redux-firebase';
 import { getCurrentUser } from 'firebase';
-import { withFirestore, isLoaded } from 'react-redux-firebase';
+import { withFirestore } from 'react-redux-firebase';
 
 function MedicationCreate(props) {
 

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import * as a from '../../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { withFirestore } from 'react-redux-firebase';
 
 function MedicationList(props) {
 
@@ -13,10 +14,13 @@ function MedicationList(props) {
     {collection: 'medications'}
   ]);
 
-  // const currentUser = {} // define current user code here
-  // const medications = useSelector(state => state.firestore.ordered.medications)
-  //   .filter(medication => medication.user === currentUser);
+  const auth = props.firebase.auth();
+  const currentUserEmail = auth.currentUser.email;
 
+  const medications = useSelector(state => state.firestore.ordered.medications);
+    //.filter(medication => medication.userEmail === currentUserEmail);
+
+    console.log(medications);
   function pressNew() {
     const { dispatch } = props;
     const action = a.medicationCreate();
@@ -28,8 +32,17 @@ function MedicationList(props) {
       <Text>Medication List!</Text>
 
       <View style={styles.buttonCover}>
-          <Button onPress={pressNew} title="Add New Medication" color={colors.secondary} />
-        </View>
+        <Button onPress={pressNew} title="Add New Medication" color={colors.secondary} />
+      </View>
+
+      {medications.map((medication) => {
+        return(
+          <View>
+            <Text>Medication: {medication.name}</Text>
+            <Text>Dosage: {medication.dosage}</Text>
+          </View>
+        )
+      })}
 
 
     </ScrollView>
@@ -55,4 +68,4 @@ const mapStateToProps = state => {
 
 MedicationList= connect(mapStateToProps)(MedicationList);
 
-export default MedicationList;
+export default withFirestore(MedicationList);
