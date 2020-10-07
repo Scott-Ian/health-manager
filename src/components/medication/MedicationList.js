@@ -17,10 +17,29 @@ function MedicationList(props) {
   const auth = props.firebase.auth();
   const currentUserEmail = auth.currentUser.email;
 
-  const medications = useSelector(state => state.firestore.ordered.medications);
+  const medications = props.firestore.data.medications
+  // const medications = useSelector(state => state.firestore.ordered.medications);
     //.filter(medication => medication.userEmail === currentUserEmail);
+  
+  console.log("Medications:")
+  console.log(medications)
 
-    console.log(medications);
+  const filterObjectToArray = function(object, currentUserEmail) {
+    let result = [];
+    
+    for(const key in object) {
+      console.log("Object[Key]")
+      console.log(object[key]);
+      if(object[key].userEmail === currentUserEmail) {
+        result.push(object[key]);
+      }
+    }
+    return result;
+  }
+
+  const filteredMedications = filterObjectToArray(medications, currentUserEmail);
+    console.log("Filtered Medications:")
+    console.log(filteredMedications);
   function pressNew() {
     const { dispatch } = props;
     const action = a.medicationCreate();
@@ -35,7 +54,7 @@ function MedicationList(props) {
         <Button onPress={pressNew} title="Add New Medication" color={colors.secondary} />
       </View>
 
-      {medications.map((medication) => {
+      {filteredMedications.map((medication) => {
         return(
           <View>
             <Text>Medication: {medication.name}</Text>
