@@ -38,7 +38,7 @@ function QoLCreate(props) {
     <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={styles.screen} >
 
       <View style={styles.form}>
-        <Text style={styles.header}>Add a New Appointment!</Text>
+        <Text style={styles.header}>Add a New Quality of Life Rating!</Text>
 
         <Text>Date:</Text>
         <TextInput
@@ -59,7 +59,7 @@ function QoLCreate(props) {
         />
 
         <View style={styles.submitButton}>
-          <Button onPress={addAppointmentToFirestore} title="Submit" color={colors.secondary} />
+          <Button onPress={addQoLToFirestore} title="Submit" color={colors.secondary} />
         </View>
 
       </View>
