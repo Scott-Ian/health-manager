@@ -105,6 +105,6 @@ const mapStateToProps = state => {
   }
 }
 
-QoLCreate = connect(mapStateToProps)(QoL);
+QoLCreate = connect(mapStateToProps)(QoLCreate);
 
 export default withFirestore(QoLCreate);

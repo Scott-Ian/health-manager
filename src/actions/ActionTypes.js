@@ -19,7 +19,3 @@ export const QOL_DETAIL = 'QOL_DETAIL';
 export const QOL_CREATE = 'QOL_CREATE';
 export const QOL_EDIT = 'QOL_EDIT';
 
-// Login Reducer Actions
-export const USER_SIGNIN = 'USER_SIGNIN';
-export const USER_SIGNOUT = 'USER_SIGNOUT';
-

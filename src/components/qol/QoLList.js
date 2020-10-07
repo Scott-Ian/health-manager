@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
 })
 
-MedicationList.propTypes = {
+QoLList.propTypes = {
   displayState: PropTypes.object,
 }
 
