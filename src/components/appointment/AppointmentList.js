@@ -22,8 +22,6 @@ function AppointmentList(props) {
     let result = [];
     
     for(const key in object) {
-      console.log("Object[Key]")
-      console.log(object[key]);
       if(object[key].userEmail === currentUserEmail) {
         result.push(object[key]);
       }

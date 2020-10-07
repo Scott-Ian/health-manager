@@ -31,10 +31,8 @@ function WelcomeScreen(props) {
       setErrorText("Passwords do not match!");
     } else {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-        console.log('Successfully Signed Up!');
         updateDisplay();
       }).catch(function(error) {
-        console.log(error.message);
         setErrorText(error.message);
       });
     }
@@ -46,10 +44,8 @@ function WelcomeScreen(props) {
     const password = signInPassword;
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-      console.log('Successfully signed in!');
       updateDisplay();
     }).catch(function(error) {
-      console.log(error.message);
       setErrorText(error.message);
     });
   }
