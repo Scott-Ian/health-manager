@@ -63,7 +63,7 @@ function WelcomeScreen(props) {
   // Sign in display
   if (formType === "Sign In") {
     return (
-      <KeyboardAvoidingView behavior='padding' 
+      <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} 
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -98,7 +98,7 @@ function WelcomeScreen(props) {
   // Sign up display
   else if (formType === "Sign Up") {
     return (
-      <KeyboardAvoidingView behavior='padding'
+      <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -142,7 +142,7 @@ function WelcomeScreen(props) {
   // Default sign-in display
   else {
     return (
-      <KeyboardAvoidingView behavior='padding' 
+      <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} 
       style={styles.background} >
         <View style={styles.logoContainer}>
           <Image source={require('../assets/placeholderLogo.png')} style={styles.logo}/>
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     width: 140,
     height: 45,
     backgroundColor: colors.secondary,
-    paddingBottom: 150,
+    paddingBottom: 50,
     paddingTop: 15,
   },
   logo: {

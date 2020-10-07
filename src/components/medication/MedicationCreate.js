@@ -31,7 +31,7 @@ function MedicationCreate(props) {
   }
 
   return(
-    <KeyboardAvoidingView behavior='padding' style={styles.screen} >
+    <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={styles.screen} >
 
       <View style={styles.form}>
         <Text style={styles.header}>Add a New Medication!</Text>
@@ -67,7 +67,9 @@ function MedicationCreate(props) {
           onChangeText = {text => setName(text)}
         />
 
-        <Button onPress={addMedicationToFirestore} title="Submit Medication" color={colors.primary} />
+        <View style={styles.submitButton}>
+          <Button onPress={addMedicationToFirestore} title="Submit" color={colors.secondary} />
+        </View>
 
       </View>
 
@@ -80,16 +82,25 @@ const styles = StyleSheet.create({
 
   },
   form: {
-
+    alignContent:'center'
   },
   header: {
     fontSize: 20,
     textDecorationLine: 'underline',
     alignSelf: 'center',
+    paddingBottom: 100
   },
   smallInput: {
-
+    height: 40,
+    width: 250,
+    borderColor: 'gray',
+    borderWidth: 1
   },
+  submitButton: {
+    width: 140,
+    height: 45,
+    backgroundColor: colors.primary,
+  }
 })
 
 MedicationCreate.propTypes = {
