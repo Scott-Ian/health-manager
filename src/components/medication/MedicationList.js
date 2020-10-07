@@ -10,13 +10,15 @@ function MedicationList(props) {
     {collection: 'medications'}
   ]);
 
-  const medications = useSelector(state => state.firestore.ordered.medications);
+  const currentUser = {} // define current user code here
+  const medications = useSelector(state => state.firestore.ordered.medications)
+    .filter(medication => medication.user === currentUser);
 
   return(
     <View>
       <Text>MedicationList Screen!</Text>
 
-      
+
     </View>
   )
 }
