@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, KeyboardAvoidingView, StyleSheet } from 'react-native';
+import { View, Text, TextInput, KeyboardAvoidingView, StyleSheet, Button } from 'react-native';
 import colors from '../../config/colors';
 import * as a from '../../actions/index';
 import { connect } from 'react-redux';
@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 function MedicationCreate(props) {
 
   const [ physician, setPhysician ] = useState(null);
-  const [ datePrescribed, setDate ] = useState(null);
+  const [ datePrescribed, setDatePrescribed ] = useState(null);
   const [ dosage, setDosage ] = useState(null);
   const [ quantity, setQuantity ] = useState(null);
   const [ name, setName ] = useState(null);
@@ -36,7 +36,39 @@ function MedicationCreate(props) {
       <View style={styles.form}>
         <Text style={styles.header}>Add a New Medication!</Text>
 
-        
+        <Text>Prescribing Physician:</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText = {text => setPhysician(text)}
+          textContentType = "name"
+        />
+
+        <Text>Date Prescribed:</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText = {text => setDatePrescribed(text)}
+        />
+
+        <Text>Dosage: e.g., "5mg, 1/day"</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText = {text => setDosage(text)}
+        />
+
+        <Text>Quantity: e.g., "50"</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText = {text => setQuantity(text)}
+        />
+
+        <Text>Drug Name:</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText = {text => setName(text)}
+        />
+
+        <Button onPress={addMedicationToFirestore} title="Submit Medication" color={colors.primary} />
+
       </View>
 
     </KeyboardAvoidingView>
@@ -54,6 +86,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textDecorationLine: 'underline',
     alignSelf: 'center',
+  },
+  smallInput: {
+
   },
 })
 
