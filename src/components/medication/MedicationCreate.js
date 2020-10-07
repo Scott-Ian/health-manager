@@ -6,6 +6,8 @@ import * as a from '../../actions/index';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useFirestore } from 'react-redux-firebase';
+import { getCurrentUser } from 'firebase';
+import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 function MedicationCreate(props) {
 
@@ -18,6 +20,10 @@ function MedicationCreate(props) {
 
   const firestore = useFirestore();
 
+  const auth = props.firebase.auth();
+  const userEmail = auth.currentUser.email;
+  console.log(userEmail);
+
   function addMedicationToFirestore() {
     firestore.collection('medications').add(
       {
@@ -26,6 +32,8 @@ function MedicationCreate(props) {
         dosage,
         quantity,
         name,
+        userEmail,
+
       }
     );
 
@@ -120,4 +128,4 @@ const mapStateToProps = state => {
 
 MedicationCreate= connect(mapStateToProps)(MedicationCreate);
 
-export default MedicationCreate;
+export default withFirestore(MedicationCreate);
