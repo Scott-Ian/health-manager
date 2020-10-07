@@ -81,63 +81,16 @@ README: Project Overview
   * React Native Tutorial: https://www.youtube.com/watch?v=0-S5a0eXPoc&ab_channel=ProgrammingwithMosh
 
 
-  ## Original Proposal
+  # ToDo List
 
-  Name of Student: _Ian Scott_
-
-Name of Project:  Health tracker app (Working Title)
-
-Project's Purpose or Goal: This project would be to develop an application for the chronically ill, and provide a tool for keeping track of medications, medication side effects, Dr's visits, dr's visits notes, and self-reporting of general health (side effects, pain, nausea) via likert-scales. Ideally this project would include some graphical representation of self-reported data
-
-List the absolute minimum features the project requires to meet this purpose or goal:
-Keep a list of current medication, known side-effects, side-effects that are presenting with the user. Include start-date, prescribing Dr. Reason for prescribing etc. 
-List/schedule of of upcoming and past Dr's appointments, with sections for notes/discussion topics leading up to the visit (i.e., what does the user want to ask/get help with?) and store notes from the visit
-Ability to store diagnoses and illness related information specific to the user. 
-
-What tools, frameworks, libraries, APIs, modules and/or other resources will you use to create this MVP? List them all here. Be specific.
-React
-JS
-API calls
-Bootstrap
-CSS Grid
-Jest
-Visual Studio Code
-
-If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: be specific
-User Authentications/login/credentials
-chart.js for graphical representation of self-reported data
-ability to generate/submit self-reporting for user health state (pain, discomfort, nausea etc.)
-Calendar integration (add Dr's visits to calendar, daily listings of medicine's/prescriptions which must be taken)
-API that retrieves Drug information (side effects, dosages, purpose/reason drug is generally prescribed etc).
-Build for Mobile
-Alerts/Reminders for taking a medication
-Images of pills or description of what they look like for easier identification
-
-What additional tools, frameworks, libraries, API's, or other resources will these additional features require?
-Firebase (for storing and retrieving multiple users data etc)
-Medicine/Drup API (have not yet found one that would be a great fit)
-React Native
-chart.js
-Possibly google calendar integration ( but I have had bad experiences with google APIs  and developer services, so may avoid for another solution)
-
-## Required Components/views
-1. Welcom/sign-in
-2. Calendar display
-
-3. Medications List
-4. Medication Details
-5. Medication Edit
-6. Medication Create
-
-Appointments
-7. Appointment List
-8. Appointment Details
-  * Delete
-  * Links to Edit
-8. Appointment Edit
-9. Appointment Create
-
-QOL Ratings
-10. QOL OverView
-11. QOL Create
-12. QOL
+  * Update Home Page/view with basic styling. 
+    * Next Appointment listing
+    * Next medication that needs to be refilled listing
+    * Reminder if daily QoL rating hasn't been submitted
+  *Add CRUD Functionality for..
+    * Apps
+    * Medications
+    * QoL
+  * Fix styling for NavBar
+  * Find way for querying based on user auth. i.e., no getting other users data
+  * project README!
