@@ -54,11 +54,12 @@ function MedicationList(props) {
         <Button onPress={pressNew} title="Add New Medication" color={colors.secondary} />
       </View>
 
-      {filteredMedications.map((medication) => {
+      {filteredMedications.map((medication, index) => {
         return(
-          <View>
-            <Text>Medication: {medication.name}</Text>
+          <View style={styles.item} key={index}>
+            <Text style={styles.header}>Medication: {medication.name}</Text>
             <Text>Dosage: {medication.dosage}</Text>
+            <Text></Text>
           </View>
         )
       })}
@@ -71,6 +72,15 @@ function MedicationList(props) {
 const styles = StyleSheet.create({
   buttonCover: {
     backgroundColor: colors.primary,
+  },
+  header: {
+    fontSize: 20,
+    textDecorationLine: 'underline',
+    alignSelf: 'center',
+  },
+  item: {
+    alignContent: 'center',
+    borderBottomWidth: 4,
   },
 })
 
