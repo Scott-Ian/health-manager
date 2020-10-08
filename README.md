@@ -79,6 +79,17 @@ export default keys;
   ### Home Page
  <img align='center' src="./ReadmeImg/Home.jpg" width='200' height='400' align='center'>
 
+ ## Known Bugs
+ _In retrospect it seems that almost everything that could have gone wrong did go wrong with this project. For example, utilizing the .env file to store and access keys was not functioning, and useing the standard workaround with the package 'react-native-dotenv' prooved similarly innefective. Additionally, the projects Jest tests will not run. I am unsure as to why, but even with some instructor assistance we were not able to resolve this issue._
+
+ _This project reminded me what it felt like to learn HTML all over again, as styling was a constant problem. Text on buttons will frequently not appear, and sizing buttons also proved somewhat difficult. As any user can see, styling is basic at best, and lacks the quality of a final finished product. However, I enjoyed working on this application as a learning experience._
+
+ _Given the time constraints, I regularly had to decide on what could be ignored and what issues or components should be prioritized._
+
+ ## If I started Again
+
+ _If I were to restart this project, and had more time, I would first focus on finding and following along with an extensive React-native tutorial which builds out visual aspects, animations, and styling of a mobile app. Working on the application logic was not difficult and well within my capabilities. However, I very much enjoyed the challenge. Though stressful at times, this was a great learning project, and I am excited to work on more mobile applications in the future!_
+
 
  ## User Stories
 
@@ -110,6 +121,7 @@ export default keys;
  ### API Consuming features
  * As a user, I want the option to pre-load information regarding a medication into my medication list entries when desired.
  * As a user, I want this applications calendar to sync with my Google Calendar.
+ * As a user, I want the application to read my prescription labels and auto-populate a new prescription entry which I can then edit for accuracy.
 
    ### Add New Medication Form
  <img src="./ReadmeImg/AddNewMedication.jpg" width='200' height='400' align='center'>
