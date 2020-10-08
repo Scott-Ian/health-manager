@@ -79,10 +79,16 @@ export default keys;
   ### Home Page
  <img align='center' src="./ReadmeImg/Home.jpg" width='200' height='400' align='center'>
 
+## Features
+_In the current state, this application has the ability of creating database entries for medications, medical appointments, and Quality of Life ratings. Furthermore users are required to log in to access any features. Users only have access to the data they created within the system, and cannot access other users information._
+
+
  ## Known Bugs
  _In retrospect it seems that almost everything that could have gone wrong did go wrong with this project. For example, utilizing the .env file to store and access keys was not functioning, and useing the standard workaround with the package 'react-native-dotenv' prooved similarly innefective. Additionally, the projects Jest tests will not run. I am unsure as to why, but even with some instructor assistance we were not able to resolve this issue._
 
  _This project reminded me what it felt like to learn HTML all over again, as styling was a constant problem. Text on buttons will frequently not appear, and sizing buttons also proved somewhat difficult. As any user can see, styling is basic at best, and lacks the quality of a final finished product. However, I enjoyed working on this application as a learning experience._
+
+ _In its current form, user data is filtered by the authors email. In future versions this must be changed, but as users do not have the ability to change their email address, this is a functioning workaround in its current status._
 
  _Given the time constraints, I regularly had to decide on what could be ignored and what issues or components should be prioritized._
 
