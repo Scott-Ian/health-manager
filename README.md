@@ -14,7 +14,7 @@
 <h3 align='center'>An Epicodus Capstone project</h3>
 
 # **Project Proposal / Overview**
- _This application is intended to assist users in taking charge of and managing their health, by providing a centralized cloud-based solution for keeping track of, taking notes on, and mapping out, medications, medical appointments, and measuring day to day quality of life. The intended user of this application is someone dealing with chronic illness, or their caretaker. In order to make this accessible during medical appointments, application will be a mobile application and store data in the Firestore cloud database._
+ _This is a learning project and my first foray into building mobile applications with React-Native. This application is intended to assist users in taking charge of and managing their health, by providing a centralized cloud-based solution for keeping track of, taking notes on, and mapping out, medications, medical appointments, and measuring day to day quality of life. The intended user of this application is someone dealing with chronic illness, or their caretaker. In order to make this accessible during medical appointments, application will be a mobile application and store data in the Firestore cloud database._
 
    ### Sign In Page
   <img align='center' src="./ReadmeImg/SignIn.jpg" width='200' height='400'>
@@ -123,6 +123,8 @@ export default keys;
  * As a user, I want this applications calendar to sync with my Google Calendar.
  * As a user, I want the application to read my prescription labels and auto-populate a new prescription entry which I can then edit for accuracy.
 
+ <br>
+
    ### Add New Medication Form
  <img src="./ReadmeImg/AddNewMedication.jpg" width='200' height='400' align='center'>
 
@@ -134,36 +136,24 @@ export default keys;
  ### Component Scaffolding
  <img src="./ReadmeImg/ComponentScaffolding.jpg" width='400' height='400' align='center'>
 
-  ## ToDo List
+ <br>
 
+  ## ToDo List / Stretch Goals
+
+  * Dry up Sign In page (WelcomeScreen.js)
   * Find API for Medication information
+    * [Perhaps This](https://open.fda.gov/apis/drug/event/)
   * Study documentation for Google Calendar
   * Look into Calendars with firebase
-  * Layout database structure (collections), and expected document values
-  * Find React-native template, and view tag resource
-  * Build the application!
-
-  ## Stretch goals
-  * View transition animations!!
-
-  ## API Information
-
-  * Drug Adverse Effects: https://open.fda.gov/apis/drug/event/
-
-
-  # ToDo List
-
-  * Update Home Page/view with basic styling. 
-    * Next Appointment listing
-    * Next medication that needs to be refilled listing
-    * Reminder if daily QoL rating hasn't been submitted
-  *Add CRUD Functionality for..
-    * Apps
-    * Medications
-    * QoL
-  * Fix styling for NavBar
-  * Find way for querying based on user auth. i.e., no getting other users data
-  * project README!
+  * Find React-native template to update app visuals with
+    * Incorporate transition animations
+  * Update Home.js view with alerts for:
+    * Upcoming Appointment(s)
+    * Upcoming Medication Refils
+    * Reminder ifdaily QoL rating hasn't been submitted
+  * Update QoL page with more functionality:
+    * Prevent submitting more than one rating per day
+    * Provide data analysis of QoL ratings over last wee, month, year, etc
 
  ### Daily QoL Rating List
   <img src="./ReadmeImg/DailyRatingList.jpg" width='200' height='400'>
