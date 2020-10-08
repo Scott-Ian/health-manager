@@ -16,6 +16,9 @@
 # **Project Proposal / Overview**
  _This application is intended to assist users in taking charge of and managing their health, by providing a centralized cloud-based solution for keeping track of, taking notes on, and mapping out, medications, medical appointments, and measuring day to day quality of life. The intended user of this application is someone dealing with chronic illness, or their caretaker. In order to make this accessible during medical appointments, application will be a mobile application and store data in the Firestore cloud database._
 
+   ### Sign In Page
+  <img align='center' src="./ReadmeImg/SignIn.jpg" width='200' height='400'>
+
 # **REQUIREMENTS**
 
 * This project uses the [expo cli](https://expo.io/)
@@ -40,6 +43,20 @@
 
 <br>
 
+# **INSTALL**
+
+## **INSTALLING WITH NODE**
+
+
+with the root project folder open in your code editor, execute the following in your terminal:
+
+``cd ProjectName``
+
+``npm install``
+
+
+<br>
+
 # **PROTECTING YOUR DATA**
 
 * After retrieving your database api keys as described in the link above, you must create a 'keys.js' file in the 'src' directory and sub in your keys as listed below:
@@ -57,8 +74,10 @@ const keys = {
 
 export default keys;
 ```
-
 <br>
+
+  ### Home Page
+ <img align='center' src="./ReadmeImg/Home.jpg" width='200' height='400' align='center'>
 
 
  ## User Stories
@@ -92,14 +111,16 @@ export default keys;
  * As a user, I want the option to pre-load information regarding a medication into my medication list entries when desired.
  * As a user, I want this applications calendar to sync with my Google Calendar.
 
+   ### Add New Medication Form
+ <img src="./ReadmeImg/AddNewMedication.jpg" width='200' height='400' align='center'>
+
  ## Diagrams
 
  ### Home Layout Mockup
- ![HomeScreen Layout](./ReadmeImg/HomeLayout.JPG)
- * Not implemented!
+ <img src="./ReadmeImg/HomeLayout.JPG" align='center' width='200' height='400'>
 
  ### Component Scaffolding
-  ![Component Scaffolding](./ReadmeImg/ComponentScaffolding.jpg)
+ <img src="./ReadmeImg/ComponentScaffolding.jpg" width='400' height='400' align='center'>
 
   ## ToDo List
 
@@ -132,7 +153,8 @@ export default keys;
   * Find way for querying based on user auth. i.e., no getting other users data
   * project README!
 
-
+ ### Daily QoL Rating List
+  <img src="./ReadmeImg/DailyRatingList.jpg" width='200' height='400'>
 
 # **TECHNOLOGIES USED**
 
@@ -160,19 +182,8 @@ _[Firebase](https://firebase.google.com/)_
 
 <br>
 
-# **INSTALL**
-
-## **INSTALLING WITH NODE**
-
-
-with the root project folder open in your code editor, execute the following in your terminal:
-
-``cd ProjectName``
-
-``npm install``
-
-
-<br>
+  ### Medication List
+  <img src="./ReadmeImg/MedicationList.jpg" width='200' height='400'>
 
 # **Author**
 
