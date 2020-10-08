@@ -188,6 +188,8 @@ _[Redux](https://redux.js.org/)_
 
 _[Firebase](https://firebase.google.com/)_
 
+_[Expo](https://expo.io/)_
+
 <br>
 
   ### Medication List
